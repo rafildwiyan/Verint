@@ -37,6 +37,7 @@ public class FirstPage {
         else{
             System.out.println("Scenario 1 FAIL");
             driver.close();
+
         }
     }
 }
