@@ -18,7 +18,7 @@ public class FirstPage {
         driver=new ChromeDriver();
     }
     @When("Open website")
-    public void i_open_homepage() throws InterruptedException {
+    public void i_open_homepage()  {
         driver.get("https://www.verint.com/");
         driver.manage().window().maximize();
     }
@@ -31,13 +31,13 @@ public class FirstPage {
     @Then("Verify text")
     public void close_browser() {
         Actions action = new Actions(driver);
-        if(driver.getPageSource().contains("customer solution") == true){
+        if(driver.getPageSource().contains("customer solution")){
             System.out.println("Scenario 1 PASSED");
+            System.out.println("Successfully verify customer solution text on result page");
         }
         else{
             System.out.println("Scenario 1 FAIL");
             driver.close();
-
         }
     }
 }
